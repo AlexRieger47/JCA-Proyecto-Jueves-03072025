@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-   <!-- Header con navegación -->
+  <!-- Header con navegación -->
   <header>
     <h1>Alexander Rieger</h1>
     <p><em>Desarrollador Web en Formación</em></p>
@@ -29,12 +30,14 @@
     <section id="sobre-nosotros">
       <h2>Sobre Mí</h2>
       <img src="assets/img/rdperson.jpg" alt="Foto de perfil de Alexander Rieger" height="200" width="200">
-      <br><i>Foto de: <a href="https://thispersondoesnotexist.com/" target="_blank" rel="noopener">This Person Does Not Exist</a></i>
+      <br><i>Foto de: <a href="https://thispersondoesnotexist.com/" target="_blank" rel="noopener">This Person Does Not
+          Exist</a></i>
       <h3>Alexander David Molina Rieger</h3>
       <p><em>Estudiante en Programación</em></p>
       <div>
         <p>¡Hola a todos! 😁</p>
-        <p>Tengo 24 años y soy un programador en sus comienzos de carrera. Me apasiona crear soluciones digitales que mejoren la vida de las personas.</p>
+        <p>Tengo 24 años y soy un programador en sus comienzos de carrera. Me apasiona crear soluciones digitales que
+          mejoren la vida de las personas.</p>
         <p><strong>Habilidades:</strong> HTML, CSS, JavaScript, Python básico</p>
         <p><strong>Intereses:</strong> Desarrollo web, logística, videojuegos.</p>
       </div>
@@ -46,11 +49,13 @@
       <article>
         <h3>Calculadora Web</h3>
         <img src="assets/img/calculator.png" alt="Captura de pantalla de la calculadora web" height="300" width="300">
-        <p><strong>Descripción:</strong> Una calculadora funcional. Incluye operaciones básicas y un diseño responsive.</p>
+        <p><strong>Descripción:</strong> Una calculadora funcional. Incluye operaciones básicas y un diseño responsive.
+        </p>
         <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-        <p><a href="https://github.com/AlexRieger47/primer-repositorio" target="_blank" rel="noopener">Ver en GitHub</a></p>
+        <p><a href="https://github.com/AlexRieger47/primer-repositorio" target="_blank" rel="noopener">Ver en GitHub</a>
+        </p>
       </article>
-      </section>
+    </section>
 
     <!-- Sección Blog -->
     <section id="blog">
@@ -61,7 +66,7 @@
         <p>Reflexiones sobre mi experiencia inicial con HTML y los conceptos que más me costaron entender...</p>
         <p><a href="blog/primer-mes-html.html">Leer más</a></p>
       </article>
-      
+
       <article>
         <h3>¿Por qué elegí programación?</h3>
         <p><em>Publicado el 10 de julio, 2025</em></p>
@@ -69,44 +74,53 @@
         <p><a href="blog/por-que-programacion.html">Leer más</a></p>
       </article>
     </section>
-    
-     <!-- Sección Referencias -->
+
+    <!-- Sección Referencias -->
     <section id="referencias">
       <h2>Referencias</h2>
       <h3>Perfiles Profesionales</h3>
       <ul>
-        <li><a href="https://github.com/AlexRieger47/" target="_blank" rel="noopener">GitHub - Repositorios de código</a></li>
-        <li><a href="https://linkedin.com/in/alexander-rieger" target="_blank" rel="noopener">LinkedIn - Perfil profesional</a></li>
-        <li><a href="https://docs.google.com/presentation/d/1mYlfHAGrt7XaIeLAatyL6FpKFyUmDsM0Wntv3kVMNy4/edit?slide=id.g363004d6943_2_0&pli=1#slide=id.g363004d6943_2_0" target="_blank" rel="noopener">Tablero de Clase de mi Curso</a></li>
+        <li><a href="https://github.com/AlexRieger47/" target="_blank" rel="noopener">GitHub - Repositorios de
+            código</a></li>
+        <li><a href="https://linkedin.com/in/alexander-rieger" target="_blank" rel="noopener">LinkedIn - Perfil
+            profesional</a></li>
+        <li><a
+            href="https://docs.google.com/presentation/d/1mYlfHAGrt7XaIeLAatyL6FpKFyUmDsM0Wntv3kVMNy4/edit?slide=id.g363004d6943_2_0&pli=1#slide=id.g363004d6943_2_0"
+            target="_blank" rel="noopener">Tablero de Clase de mi Curso</a></li>
       </ul>
-      </section>
+    </section>
 
     <!-- Sección Contacto -->
     <section id="contacto">
       <h2>Contacto</h2>
       <p>¿Interesado en colaborar o tienes alguna pregunta? ¡Contáctame!</p>
       <form action="#" method="post">
-        <div>
-          <label for="inp-username">Nombre completo</label>
-          <input type="text" name="inp-username" id="inp-username" placeholder="Ingrese su nombre..." required>
-        </div>
-        
-        <div>
-          <label for="inp-email">Email</label>
-          <input type="email" name="inp-email" id="inp-email" placeholder="su.email@ejemplo.com" required>
-        </div>
-        
-        <div>
-          <label for="inp-subject">Asunto</label>
-          <input type="text" name="inp-subject" id="inp-subject" placeholder="Motivo de contacto...">
-        </div>
-        
-        <div>
-          <label for="inp-message">Mensaje</label>
-          <textarea name="inp-message" id="inp-message" rows="5" placeholder="Escriba su mensaje aquí..." required></textarea>
-        </div>
-        
-        <input type="submit" value="Enviar mensaje">
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <div>
+            <label for="inp-username">Nombre completo</label>
+            <input type="text" name="inp-username" id="inp-username" placeholder="Ingrese su nombre..." required>
+          </div>
+          <br>
+          <div>
+            <label for="inp-email">Email</label>
+            <input type="email" name="inp-email" id="inp-email" placeholder="su.email@ejemplo.com" required>
+          </div>
+          <br>
+          <div>
+            <label for="inp-subject">Asunto</label>
+            <input type="text" name="inp-subject" id="inp-subject" placeholder="Motivo de contacto...">
+          </div>
+          <br>
+          <div>
+            <label for="inp-message">Mensaje</label>
+            <br>
+            <textarea name="inp-message" id="inp-message" rows="5" placeholder="Escriba su mensaje aquí..."
+              required></textarea>
+          </div>
+          <br>
+          <input type="submit" value="Enviar mensaje">
+        </fieldset>
       </form>
 
       <div>
@@ -118,10 +132,15 @@
     </section>
   </main>
 
-   <!-- Footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Alexander Rieger. Todos los derechos reservados.</p>
-    <p><em>Desarrollado para: Jóvenes Creativos</em></p>
+    <ul>
+      <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="#" target="_blank" rel="noopener">X/Twitter</a></li>
+    </ul>
+  <p><em>Desarrollado para: Jóvenes Creativos</em></p>
   </footer>
 </body>
 </html>
