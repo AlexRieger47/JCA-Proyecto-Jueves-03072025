@@ -1,0 +1,486 @@
+/* ========================================
+   ESTILOS RESPONSIVOS
+   ======================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header {
+    padding: 20px;
+    margin: 10px auto 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .section-container {
+    padding: 20px 15px;
+    margin: 20px 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .section-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .section-container p {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 20px;
+    margin: 30px auto 10px;
+  }
+
+  footer ul {
+    gap: 15px;
+  }
+
+  /* Sobre Mí - Responsive */
+  .profile-section {
+    gap: 1.5rem;
+  }
+
+  .profile-name {
+    font-size: 1.7rem;
+  }
+
+  .profile-title {
+    font-size: 1.1rem;
+  }
+
+  .skills-interests-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills-card,
+  .interests-card {
+    padding: 1.5rem;
+  }
+
+  .intro-card {
+    padding: 1.5rem;
+  }
+
+  .greeting-icon {
+    font-size: 2.5rem;
+    top: -5px;
+    right: 15px;
+  }
+
+  /* Proyectos - Responsive */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    margin: 0 1rem;
+  }
+
+  .project-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-icon {
+    font-size: 2rem;
+  }
+
+  .project-content {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  /* Referencias - Responsive */
+  .title-references {
+    font-size: 2rem;
+  }
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .review {
+    max-width: 90%;
+    min-width: 280px;
+  }
+
+  .head-review {
+    width: 100px;
+    height: 100px;
+  }
+
+  .body-review {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .name-review {
+    font-size: 1.3rem;
+  }
+
+  .desc-review {
+    font-size: 0.9rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  header {
+    padding: 15px 10px;
+    margin: 5px auto 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav a {
+    width: 180px;
+    text-align: center;
+    padding: 10px 15px;
+  }
+
+  .section-container {
+    padding: 15px 10px;
+    margin: 15px 0;
+  }
+
+  .section-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .blog-card {
+    margin: 1rem 0;
+  }
+
+  .blog-card .description {
+    padding: 20px;
+  }
+
+  .blog-card .description h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Sobre Mí - Móviles */
+  .about-me-container {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .profile-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-image-wrapper img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-title {
+    font-size: 1rem;
+  }
+
+  .skills-interests-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .skills-card,
+  .interests-card {
+    padding: 1.2rem;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .skills-card h4,
+  .interests-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .intro-card {
+    padding: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Proyectos - Móviles */
+  .projects-container {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .project-card {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .project-header {
+    padding: 1.2rem 1rem 0.8rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-icon {
+    font-size: 1.8rem;
+  }
+
+  .project-image-container {
+    padding: 0.8rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .project-content {
+    padding: 0.8rem 1rem 1.2rem;
+  }
+
+  .project-description,
+  .project-tech {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .description-icon,
+  .tech-icon {
+    font-size: 1.3rem;
+  }
+
+  .project-link {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Referencias - Móviles */
+  .rev-section {
+    padding: 0 0.5rem;
+  }
+
+  .title-references {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .review {
+    min-width: 260px;
+  }
+
+  .head-review {
+    width: 80px;
+    height: 80px;
+    margin: 1.5rem auto;
+  }
+
+  .body-review {
+    padding: 1.5rem 1rem 1rem;
+    margin-top: -20px;
+  }
+
+  .name-review {
+    font-size: 1.2rem;
+  }
+
+  .place-review {
+    font-size: 0.9rem;
+  }
+
+  .rating {
+    font-size: 1rem;
+  }
+
+  .desc-review {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .link-review a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Formulario de contacto - Móviles */
+  form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  fieldset {
+    padding: 1rem 0.8rem;
+    margin: 0;
+    border-radius: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Mensajes de JavaScript - Móviles */
+  .form-message {
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-message h4 {
+    font-size: 1rem;
+  }
+
+  .character-counter {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* Estilos responsivos para tarjetas de blog en pantallas medianas y grandes */
+@media (min-width: 640px) {
+  .blog-card {
+    flex-direction: row;
+    max-width: 700px;
+  }
+
+  .blog-card .meta {
+    flex-basis: 40%;
+    height: auto;
+    min-height: 250px;
+  }
+
+  .blog-card .description {
+    flex-basis: 60%;
+    position: relative;
+  }
+
+  .blog-card .description::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transform: skewX(-3deg);
+    z-index: -1;
+  }
+
+  .blog-card.alt {
+    flex-direction: row-reverse;
+  }
+
+  .blog-card.alt .description::before {
+    left: inherit;
+    right: -10px;
+    transform: skewX(3deg);
+  }
+
+  .blog-card.alt .details {
+    left: 100%;
+    right: -100%;
+  }
+
+  .blog-card.alt:hover .details {
+    left: 0;
+    right: 0;
+  }
+}
