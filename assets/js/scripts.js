@@ -78,13 +78,13 @@ function initFormValidation() {
     }
 }
 
-// Función auxiliar para validar email
+// FUNCIÓN AUXILIAR PARA VALIDAR E-MAIL
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Función para mostrar errores del formulario
+// FUNCIÓN PARA MOSTRAR ERRORES DEL FORMULARIO
 function showFormErrors(errors) {
     removeFormMessages();
 
@@ -99,7 +99,7 @@ function showFormErrors(errors) {
     form.parentNode.insertBefore(errorDiv, form);
 }
 
-// Función para mostrar envío exitoso de mensaje
+// FUNCIÓN PARA MOSTRAR ENvíO EXITOSO DE MENSAJE
 function showFormSuccess() {
     removeFormMessages();
 
@@ -116,14 +116,13 @@ function showFormSuccess() {
     form.reset();
 }
 
-// Función auxiliar para remover mensajes anteriores
+// FUNCIÓN AUXILIAR PARA REMOVER MENSAJES ANTERIORES
 function removeFormMessages() {
     const existingMessages = document.querySelectorAll('.form-message');
     existingMessages.forEach(message => message.remove());
 }
 
 // EFECTO DE TYPING PARA EL TÍTULO
-// Esta función crea un efecto de máquina de escribir en el título
 function initTypingEffect() {
     const titleElement = document.querySelector('header h1');
     if (titleElement) {
@@ -146,7 +145,6 @@ function initTypingEffect() {
 }
 
 // CONTADOR DE CARACTERES PARA EL TEXTAREA
-// Esta función muestra cuántos caracteres ha escrito el usuario
 function initCharacterCounter() {
     const textarea = document.getElementById('inp-message');
     if (textarea) {
@@ -163,9 +161,9 @@ function initCharacterCounter() {
             if (count < 10) {
                 counter.style.color = '#EF9FAB'; // Rojo si es muy poco
             } else if (count < 50) {
-                counter.style.color = '#EBCE87'; // Amarillo si es poco
+                counter.style.color = '#EBCE87'; // Amarillo si es suficiente
             } else {
-                counter.style.color = '#B2EB87'; // Verde si es suficiente
+                counter.style.color = '#B2EB87'; // Verde si es un mensaje completo
             }
         });
     }
@@ -176,7 +174,6 @@ function initCharacterCounter() {
 function initializeWebsite() {
     console.log('Iniciando funciones de la página...');
 
-    // Agregamos la clase js-enabled al body para activar las animaciones
     document.body.classList.add('js-enabled');
 
     initSmoothScrolling();
@@ -184,6 +181,7 @@ function initializeWebsite() {
     initFormValidation();
     initTypingEffect();
     initCharacterCounter();
+    initSkillBars();
 
     console.log('¡Todas las funciones se activaron correctamente!');
 }
@@ -191,11 +189,38 @@ function initializeWebsite() {
 // EVENTO QUE EJECUTA TODO CUANDO LA PÁGINA ESTÁ LISTA
 document.addEventListener('DOMContentLoaded', initializeWebsite);
 
-// BONUS: Función para mostrar/ocultar información adicional
-// Esta función puede ser útil para expandir secciones
+// FUNCIÓN PARA MOSTRAR/OCULTAR INFORMACIÓN ADICIONAL
+
 function toggleInfo(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
         element.style.display = element.style.display === 'none' ? 'block' : 'none';
     }
+}
+
+// PROGRESS BARS: animar cuando sean visibles
+function initSkillBars(){
+  const bars = document.querySelectorAll('.skill-card .progress .fill');
+  if(!bars.length) return;
+
+  bars.forEach(bar => {
+    // resetear width a 0 para permitir la reproducción
+    bar.style.width = '0%';
+  });
+
+  const obs = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const fill = entry.target;
+        // Ejecutar la animación grow al establecer ancho al siguiente frame
+        requestAnimationFrame(()=>{
+          fill.style.transition = 'width 2000ms cubic-bezier(0.42, 0, 0.58, 1) 1ms';
+          fill.style.width = `calc(${getComputedStyle(fill).getPropertyValue('--p')} * 100%)`;
+        });
+        observer.unobserve(fill);
+      }
+    });
+  }, { threshold: 0.35 });
+
+  bars.forEach(bar => obs.observe(bar));
 }

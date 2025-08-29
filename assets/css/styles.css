@@ -321,7 +321,7 @@ nav a:hover {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background: linear-gradient(45deg, rgba(222, 222, 222, 0.375), rgb(237, 236, 237), rgba(228, 227, 228, 0.2));
+  background: linear-gradient(45deg, rgba(222, 222, 222, 0.375), rgba(237, 236, 237), rgba(228, 227, 228, 0.2));
   border-radius: 50%;
   filter: blur(15px);
   opacity: 0;
@@ -387,6 +387,7 @@ nav a:hover {
   transform: rotate(15deg);
 }
 
+
 .intro-card p {
   position: relative;
   z-index: 2;
@@ -397,6 +398,15 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--primary-text);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .skills-card,
@@ -425,6 +435,33 @@ nav a:hover {
   display: block;
 }
 
+/* Neutralizar fondo/borde para iconos dentro de las tarjetas (skills/interests) */
+.pixel-emoji, .skills-card .card-icon,
+.interests-card .card-icon {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0;
+}
+
+/* Imágenes de iconos sin cajas ni bordes */
+.skills-card .card-icon img,
+.interests-card .card-icon img {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Ajuste para imágenes dentro de los iconos genéricos */
+.card-icon img {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
 .skills-card h4,
 .interests-card h4 {
   color: var(--primary-text);
@@ -590,6 +627,412 @@ footer a {
 footer a:hover {
   color: var(--link-hover);
   text-decoration: underline;
+}
+
+/* Iconos redes sociales en el footer */
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+footer .social-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+footer .social-links li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  text-decoration: none;
+}
+
+footer .social-links li a:focus-visible {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.15), 0 10px 30px var(--liquid-shadow);
+}
+
+footer .social-links img {
+  width: 44px;
+  height: 44px;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+}
+
+/* Ocultar texto visualmente pero disponible para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pixel-emoji {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: -0.75em;
+  margin-left: 0.55em;
+  display: inline-block;
+}
+
+/* Estilos responsivos movidos a responsive.css */
+/* ===== Habilidades: barras de progreso líquido ===== */
+.skill-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--liquid-border2);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 8px 32px var(--liquid-shadow);
+}
+
+.skill-card .skill-header{
+  display:flex; align-items:center; justify-content:space-between;
+  color: var(--primary-text);
+  font-weight:600;
+  margin-bottom:0.5rem;
+}
+
+.skill-card .progress{
+  position:relative;
+  height:10px;
+  border-radius:999px;
+  background: rgba(255, 255, 255, 0.35);
+  overflow:hidden;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Gradiente con inicio #FCFBFF y fin #22ABC5 */
+.skill-card .progress .fill{
+  --duration: 2000ms;
+  --easing: cubic-bezier(0.42, 0, 0.58, 1); /* ease-in-out */
+  position:absolute; inset:0 auto 0 0;
+  width: 0%;
+  border-radius:inherit;
+  background: linear-gradient(90deg, #FCFBFF 0%, #b9e7f2 30%, #6fd1df 60%, #22ABC5 100%);
+  /* efecto líquido */
+  background-size: 200% 100%;
+  animation: fillGrow var(--duration) var(--easing) forwards 1, liquidMove 3000ms ease-in-out infinite;
+  animation-delay: 1ms, 1ms; /* delay de 1ms para ambas */
+  filter: drop-shadow(0 2px 6px rgba(34,171,197,0.25));
+}
+
+/* Onda superior para aspecto líquido */
+.skill-card .progress .fill::after{
+  content:"";
+  position:absolute; right: -12px; top:-8px; width: 24px; height: 24px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,255,255,0) 60%);
+  border-radius:50%; opacity:0.8; filter: blur(1px);
+}
+
+@keyframes fillGrow{
+  to { width: calc(var(--p) * 100%); }
+}
+
+@keyframes liquidMove{
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Grid more like the mock */
+.skills-interests-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.skills-card,
+.interests-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px var(--liquid-shadow);
+  border: 1px solid var(--liquid-border2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-card:hover,
+.interests-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--liquid-shadow2);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Neutralizar fondo/borde para iconos dentro de las tarjetas (skills/interests) */
+.pixel-emoji, .skills-card .card-icon,
+.interests-card .card-icon {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0;
+}
+
+/* Imágenes de iconos sin cajas ni bordes */
+.skills-card .card-icon img,
+.interests-card .card-icon img {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Ajuste para imágenes dentro de los iconos genéricos */
+.card-icon img {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+.skills-card h4,
+.interests-card h4 {
+  color: var(--primary-text);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Sección de proyectos movida a projects.css */
+
+/* Sección de blog movida a blog.css */
+
+/* Sección de referencias movida a references.css */
+
+/* ========================================
+   8. SECCIÓN CONTACTO
+   ======================================== */
+/* Estilos para formularios */
+form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--liquid-border2);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+fieldset {
+  border: 1px solid var(--liquid-border2);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+legend {
+  color: var(--primary-text);
+  font-weight: 600;
+  padding: 0 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  background: var(--liquid-primary);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--liquid-border2);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: var(--primary-text);
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px var(--liquid-shadow);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Botón de envío */
+input[type="submit"] {
+  background: var(--liquid-primary);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--liquid-border2);
+  border-radius: 15px;
+  padding: 12px 25px;
+  color: var(--primary-text);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--liquid-shadow);
+  width: auto;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 20px var(--liquid-shadow);
+  transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px var(--liquid-shadow);
+}
+
+/* Estilos para botones */
+button {
+  background: var(--liquid-primary);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--liquid-border2);
+  color: var(--primary-text);
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--liquid-shadow);
+  font-weight: 500;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   9. FOOTER
+   ======================================== */
+footer {
+  background: var(--liquid-primary);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--liquid-border2);
+  border-radius: 25px;
+  padding: 30px;
+  margin: 40px auto 20px;
+  max-width: 800px;
+  box-shadow: 0 8px 32px var(--liquid-shadow);
+  text-align: center;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--link-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+footer a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Iconos redes sociales en el footer */
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+footer .social-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+footer .social-links li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  text-decoration: none;
+}
+
+footer .social-links li a:focus-visible {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.15), 0 10px 30px var(--liquid-shadow);
+}
+
+footer .social-links img {
+  width: 44px;
+  height: 44px;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+}
+
+/* Ocultar texto visualmente pero disponible para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pixel-emoji {
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: -0.75em;
+  margin-left: 0.55em;
+  display: inline-block;
 }
 
 /* Estilos responsivos movidos a responsive.css */

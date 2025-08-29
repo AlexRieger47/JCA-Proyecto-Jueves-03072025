@@ -43,6 +43,13 @@
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
+.project-icon img {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: left;
+}
+
 .project-title {
   color: #1a1a1a;
   font-size: 1.5rem;
@@ -50,6 +57,7 @@
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
   margin: 0;
 }
+
 
 .project-image-container {
   padding: 1rem 2rem;
@@ -146,6 +154,15 @@
   flex-shrink: 0;
 }
 
+.description-icon img,
+.tech-icon img {
+  width: 1em;
+  height: 1em;
+  margin-bottom: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .description-text,
 .tech-text {
   flex: 1;
@@ -184,4 +201,50 @@
 
 .link-icon {
   font-size: 1.1rem;
+}
+
+/* Neutralizar fondo/borde para iconos dentro de las tarjetas (skills/interests) */
+.project-icon img, .description-icon img {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0;
+}
+
+/* Imágenes de iconos sin cajas ni bordes */
+.project-icon img, .description-icon img {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Encabezado de la sección Proyectos con icono inline y título centrado */
+.projects-section-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 12px;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.projects-section-title h2{
+  margin: 0;
+  text-align:center;
+}
+
+.projects-section-icon{
+  font-size: 2rem;
+  line-height: 1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.25));
+}
+
+.projects-section-icon img{
+  width: 1em; height: 1em; display:block;
 }

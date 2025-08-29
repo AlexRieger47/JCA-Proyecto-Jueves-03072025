@@ -56,49 +56,80 @@
 
         <div class="about-content">
           <div class="intro-card">
-            <div class="greeting-icon">👋</div>
-            <p>¡Hola a todos! 😁</p>
+            <div class="greeting-icon"><img src="assets/img/vinterest.png" alt="Hola" height="40" width="40"></div>
+            <p>¡Hola a todos! <img class="pixel-emoji" src="assets/svg/angellist.svg" alt="Saludo"></p>
             <p>Tengo 24 años y soy un programador en sus comienzos de carrera. Me apasiona crear soluciones digitales
               que
               mejoren la vida de las personas.</p>
           </div>
 
+          <h4 class="section-title">Habilidades</h4>
           <div class="skills-interests-grid">
-            <div class="skills-card">
-              <div class="card-icon">💻</div>
-              <h4>Habilidades</h4>
-              <p>HTML, CSS, JavaScript, Python básico</p>
+            <div class="skills-card skill-card">
+              <div class="skill-header">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                <span class="fill" style="--p:0.95;"></span>
+              </div>
             </div>
 
-            <div class="interests-card">
-              <div class="card-icon">🎯</div>
-              <h4>Intereses</h4>
-              <p>Desarrollo web, logística, videojuegos.</p>
+            <div class="skills-card skill-card">
+              <div class="skill-header">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <span class="fill" style="--p:0.90;"></span>
+              </div>
+            </div>
+
+            <div class="skills-card skill-card">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                <span class="fill" style="--p:0.85;"></span>
+              </div>
+            </div>
+
+            <div class="skills-card skill-card">
+              <div class="skill-header">
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-percent">100%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <span class="fill" style="--p:100;"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Sección Proyectos -->
     <section id="proyectos" class="section-container">
       <div class="projects-container">
-        <h2>Proyectos</h2>
+        <div class="projects-section-title" aria-label="Sección Proyectos">
+          <span class="projects-section-icon" aria-hidden="true">
+            <img src="assets/img/Icons/ProjectIcon.png" alt="Proyectos" />
+          </span>
+          <h2>Proyectos</h2>
+        </div>
 
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-header">
-              <div class="project-icon">🧮</div>
-              <h3 class="project-title">Calculadora Web</h3>
+              <h3 class="project-title">Tatetí (Tic Tac Toe)</h3>
             </div>
 
             <div class="project-image-container">
               <div class="project-image-wrapper">
-                <img src="assets/img/calculator.png" alt="Captura de pantalla de la calculadora web" height="150"
-                  width="150">
+                <img src="assets/img/Tateti.png" alt="Captura de pantalla de Tateti" height="150" width="150">
                 <div class="image-overlay">
                   <div class="overlay-content">
-                    <a href="https://github.com/AlexRieger47/primer-repositorio" target="_blank" rel="noopener"
+                    <a href="https://github.com/AlexRieger47/JCA-Proyecto-Tateti" target="_blank" rel="noopener"
                       class="view-project">Ver Proyecto</a>
                   </div>
                 </div>
@@ -107,15 +138,15 @@
 
             <div class="project-content">
               <div class="project-description">
-                <div class="description-icon">📝</div>
+                <div class="description-icon"><img src="assets/img/Icons/DescriptionIcon.png" alt="Descripción" /></div>
                 <div class="description-text">
-                  <strong>Descripción:</strong> Una calculadora funcional. Incluye operaciones básicas y un diseño
+                  <strong>Descripción:</strong> El clásico juego Tic Tac Toe. Incluye sonidos y un diseño
                   responsive.
                 </div>
               </div>
 
               <div class="project-tech">
-                <div class="tech-icon">⚡</div>
+                <div class="tech-icon"><img src="assets/img/Icons/TechnologyIcon.png" alt="Tecnologías" /></div>
                 <div class="tech-text">
                   <strong>Tecnologías:</strong> HTML, CSS, JavaScript
                 </div>
@@ -209,11 +240,11 @@
               <div class="name-review">Micaela Sierra</div>
               <div class="place-review">CEO de ZenFlow</div>
               <div class="rating">
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
               </div>
               <div class="desc-review">"Alexander captó nuestra esencia a la perfección. El sitio respira ZenFlow en
                 cada detalle."</div>
@@ -231,11 +262,11 @@
               <div class="name-review">Nelson Urrutia</div>
               <div class="place-review">Ingeniero Logístico</div>
               <div class="rating">
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
               </div>
               <div class="desc-review">"Preciso, ágil y claro. El sistema que desarrolló nos ahorra horas de trabajo
                 cada semana."</div>
@@ -253,17 +284,16 @@
               <div class="name-review">Clara Rivero</div>
               <div class="place-review">Archivóloga Digital</div>
               <div class="rating">
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
-                <i class="star">⭐</i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
+                <i class="star"><img src="assets/img/Icons/StarIcon.png" alt="Estrella" /></i>
               </div>
               <div class="desc-review">“Transformó una web obsoleta en un archivo vivo y funcional. Profesional,
                 sensible y eficaz.”</div>
               <div class="link-review">
-                <a href="#"
-                  target="_blank" rel="noopener">Ver Perfil</a>
+                <a href="#" target="_blank" rel="noopener">Ver Perfil</a>
               </div>
             </div>
           </div>
@@ -307,7 +337,7 @@
       <div>
         <h3>Información de contacto</h3>
         <p><strong>Email:</strong> <a href="mailto:alexrieger.147@email.com">alexrieger.147@gmail.com</a></p>
-        <p><strong>Teléfono:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+1234567890">+59899050760</a></p>
         <p><strong>Ubicación:</strong> Algorta, Uruguay</p>
       </div>
     </section>
@@ -316,12 +346,27 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Alexander Rieger. Todos los derechos reservados.</p>
-    <ul>
-      <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
-      <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="#" target="_blank" rel="noopener">X/Twitter</a></li>
+    <ul class="social-links">
+      <li>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="assets/img/Facebook.png" alt="Facebook" />
+          <span class="sr-only">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="assets/img/Instagram.png" alt="Instagram" />
+          <span class="sr-only">Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X/Twitter">
+          <img src="assets/img/Twitter.png" alt="X/Twitter" />
+          <span class="sr-only">X/Twitter</span>
+        </a>
+      </li>
     </ul>
-    <p><em>Desarrollado para: Jóvenes Creativos</em></p>
+    <p><em>Desarrollado para: Jóvenes creaTIvos</em></p>
   </footer>
 </body>
 

@@ -102,6 +102,13 @@
   transition: transform 0.2s ease;
 }
 
+.star img {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .review:hover .star {
   transform: scale(1.2);
 }

@@ -431,6 +431,21 @@
     font-size: 0.8rem;
     text-align: center;
   }
+
+  /* Social links en footer - Móviles */
+  footer .social-links {
+    gap: 12px;
+    margin: 16px 0;
+  }
+  footer .social-links li a {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  footer .social-links img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Estilos responsivos para tarjetas de blog en pantallas medianas y grandes */
