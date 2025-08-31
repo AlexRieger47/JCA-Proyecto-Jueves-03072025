@@ -134,7 +134,7 @@ body {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-image: url('JCA-Proyecto-Jueves-03072025/assets/img/forest3.jpg');
+  background-image: url('/JCA-Proyecto-Jueves-03072025/assets/img/forest3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
